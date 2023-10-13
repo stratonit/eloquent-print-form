@@ -196,4 +196,3 @@ $tempFileName = $printFormProcessor->process($templateFile, $entity, [
     },
 ]);
 ```
-# eloquent-print-form
