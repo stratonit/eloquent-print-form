@@ -38,11 +38,11 @@ $templateFile = resource_path('path_to_print_forms/your_print_form.docx');
 $tempFileName = $printFormProcessor->process($templateFile, $entity);
 ```
 
-## Examples
+## Примеры
 
-### Basic example
+### Базовый пример
 
-For example, if there are next models in project.
+Допустим, в проекте есть следующие модели.
 
 ```php
 use Illuminate\Database\Eloquent\Model;
@@ -105,7 +105,7 @@ class ContractAppendix extends Model
 }
 ```
 
-Example of Laravel's controller action for printing contract.
+Пример действия контроллера в Laravel для печати контракта
 
 ```php
 public function downloadPrintForm(FormRequest $request)
@@ -183,9 +183,9 @@ $templateFile = resource_path('path_to_print_forms/your_print_form.docx');
 $tempFileName = $printFormProcessor->process($templateFile, $entity);
 ```
 
-### How to specify custom processors for some variables
+### Как указать пользовательские обработчики для некоторых переменных
 
-Example of custom processor for variable `${custom}`.
+Пример пользовательского обработчика для переменной `${custom}`.
 
 ```php
 $tempFileName = $printFormProcessor->process($templateFile, $entity, [
