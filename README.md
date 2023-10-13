@@ -15,18 +15,18 @@ composer require stratonit/eloquent-print-form
 Создайте форму для печати (файл docx), используя следующий синтаксис.
 
 - `${field_name}` - стандартное поле
--`${entity.field_name}` - поле из связанной сущности
-  -`${entity.field_name|date}` - форматировать поле как дату
-  -`${entity.field_name|date|placeholder}` - форматировать поле как дату и заменить на "____________________", если поле пустое
-  -`${entity1.entity2.field_name}` - поле из связанной сущности через одну таблицу
-  -`${entities.field_name}` - для данных таблицы
+- `${entity.field_name}` - поле из связанной сущности
+- `${entity.field_name|date}` - форматировать поле как дату
+- `${entity.field_name|date|placeholder}` - форматировать поле как дату и заменить на "____________________", если поле пустое
+- `${entity1.entity2.field_name}` - поле из связанной сущности через одну таблицу
+- `${entities.field_name}` - для данных таблицы
 Как вы можете видеть, возможно использование "труб" (pipes), например: |date, |date|placeholder. Поддерживаемые "трубы":
 
--`placeholder` - заменяет пустую переменную на "____________________".
--`date` - форматирует дату
--`dateTime` - форматирует дату и время
--`int` - форматирует целое число
--`decimal` - форматирует десятичное число
+- `placeholder` - заменяет пустую переменную на "____________________".
+- `date` - форматирует дату
+- `dateTime` - форматирует дату и время
+- `int` - форматирует целое число
+- `decimal` - форматирует десятичное число
 Также возможно указание пользовательских "труб".
 
 Сгенерировать форму для печати для указанной сущности.
@@ -38,7 +38,7 @@ $templateFile = resource_path('path_to_print_forms/your_print_form.docx');
 $tempFileName = $printFormProcessor->process($templateFile, $entity);
 ```
 
-## Examples 
+## Examples
 
 ### Basic example
 
@@ -146,7 +146,7 @@ Example of generated document
 Contract number: F-123  
 Contract date: 12.04.2012    
 Customer: IBM  
-Customer category: ____________________ 
+Customer category: ____________________
 
 Appendixes:
 
