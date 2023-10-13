@@ -1,6 +1,6 @@
 <?php
 
-namespace Mnvx\EloquentPrintForm;
+namespace Stratonit\EloquentPrintForm;
 
 class PrintFormException extends \Exception
 {
