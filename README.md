@@ -158,7 +158,7 @@ public function downloadPrintForm(FormRequest $request)
 
 ---
 
-### How to specify custom pipes
+### Как указать пользовательские "конвеер" (pipes)
 
 ```php
 class CustomPipes extends \Mnvx\EloquentPrintForm\Pipes
