@@ -122,16 +122,17 @@ public function downloadPrintForm(FormRequest $request)
 }
 ```
 
-Example of docx template
+Пример шаблона docx
 
 ---
 
-Contract number: ${number|placeholder}  
-Contract date: ${start_at|date|placeholder}    
-Customer: ${customer.name}  
-Customer category: ${customer.category.name|placeholder}
+Номер контракта: `${number|placeholder}`
+Дата контракта: `${start_at|date|placeholder}`
+Клиент: `${customer.name}`
+Категория клиента: `${customer.category.name|placeholder}`
 
-Appendixes:
+Приложения:
+
 
 | Row number                | Appendix number      | Appendix tax      |
 | ------------------------- | -------------------- | -----------------:|
@@ -139,17 +140,16 @@ Appendixes:
 
 ---
 
-Example of generated document
+Пример сгенерированного документа
 
 ---
 
-Contract number: F-123  
-Contract date: 12.04.2012    
-Customer: IBM  
-Customer category: ____________________
+Номер контракта: F-123
+Дата контракта: 12.04.2012
+Клиент: IBM
+Категория клиента: ____________________
 
-Appendixes:
-
+Приложения:
 | Row number                | Appendix number      | Appendix tax      |
 | ------------------------- | -------------------- | -----------------:|
 | 1                         | A-1                  | 1234              |
