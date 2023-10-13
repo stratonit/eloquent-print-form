@@ -126,10 +126,10 @@ public function downloadPrintForm(FormRequest $request)
 
 ---
 
-Номер контракта: `${number|placeholder}`
-Дата контракта: `${start_at|date|placeholder}`
-Клиент: `${customer.name}`
-Категория клиента: `${customer.category.name|placeholder}`
+- Номер контракта: `${number|placeholder}`
+- Дата контракта: `${start_at|date|placeholder}`
+- Клиент: `${customer.name}`
+- Категория клиента: `${customer.category.name|placeholder}`
 
 Приложения:
 
