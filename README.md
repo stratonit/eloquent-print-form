@@ -7,7 +7,7 @@ Easy way to generate docx print forms of invoices, contracts and other documents
 Installation
 
 ```bash
-composer require mnvx/eloquent-print-form
+composer require stratonit/eloquent-print-form
 ```
 
 Declare models for Eloquent.

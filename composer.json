@@ -1,0 +1,25 @@
+{
+    "name": "stratonit/eloquent-print-form",
+    "description": "Шаблоны Laravel ",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["print form", "docx", "document", "word", "invoice", "contract"],
+    "homepage": "https://github.com/stratonit/eloquent-print-form",
+    "autoload": {
+      "psr-4": {
+        "Mnvx\\EloquentPrintForm\\": "src/"
+      }
+    },
+    "authors": [
+        {
+            "name": "Stratoni",
+            "email": "str@materia60.ru"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/database": "^8.13",
+        "nesbot/carbon": "^2.41",
+        "phpoffice/phpword": "^0.17.0"
+    }
+}
