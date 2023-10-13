@@ -1,36 +1,35 @@
 # Print forms for Eloquent
 
-Easy way to generate docx print forms of invoices, contracts and other documents.
+Простой способ генерации форматов печати docx для счетов, контрактов и других документов.
 
-## Usage
+## Использование
 
-Installation
+Установка
 
 ```bash
 composer require stratonit/eloquent-print-form
 ```
 
-Declare models for Eloquent.
+Объявите модели для Eloquent.
 
-Create print form (docx file) using next syntax.
+Создайте форму для печати (файл docx), используя следующий синтаксис.
 
-- `${field_name}` - standard field
-- `${entity.field_name}` - field from linked entity
-- `${entity.field_name|date}` - format field as date
-- `${entity.field_name|date|placeholder}` - format field as date and replace to "____________________" if field is empty
-- `${entity1.entity2.field_name}` - field from linked entity through one table
-- `${entities.field_name}` - for table data
+- `${field_name}` - стандартное поле
+-`${entity.field_name}` - поле из связанной сущности
+  -`${entity.field_name|date}` - форматировать поле как дату
+  -`${entity.field_name|date|placeholder}` - форматировать поле как дату и заменить на "____________________", если поле пустое
+  -`${entity1.entity2.field_name}` - поле из связанной сущности через одну таблицу
+  -`${entities.field_name}` - для данных таблицы
+Как вы можете видеть, возможно использование "труб" (pipes), например: |date, |date|placeholder. Поддерживаемые "трубы":
 
-As you may see, it is possible to use pipes, for example: `|date`, `|date|placeholder`. Supported pipes are:
-- `placeholder` - replaces empty variable to "____________________".
-- `date` - format date
-- `dateTime` - format date time
-- `int` - format int value
-- `decimal` - format decimal value
+-`placeholder` - заменяет пустую переменную на "____________________".
+-`date` - форматирует дату
+-`dateTime` - форматирует дату и время
+-`int` - форматирует целое число
+-`decimal` - форматирует десятичное число
+Также возможно указание пользовательских "труб".
 
-It is possible also to specify custom pipes.
-
-Generate print form for specified entity
+Сгенерировать форму для печати для указанной сущности.
 
 ```php
 $entity = Contract::find($id);
